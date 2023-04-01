@@ -1,0 +1,2 @@
+# QuerySubscriber
+QuerySubscriber(Rest Service)
