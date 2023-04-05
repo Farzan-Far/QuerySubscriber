@@ -5,8 +5,6 @@ import jakarta.persistence.*;
 
 public class Request
 {
-    //Todo: Change the class type to Record
-
     private String name;
     private String family;
 
@@ -23,17 +21,6 @@ public class Request
                 ", country=" + country +
                 '}';
     }
-
-//    public Request() {
-//    }
-//
-//    public Request(String name, String family, String nationalID, Country country) {
-//        this.name = name;
-//        this.family = family;
-//        this.nationalID = nationalID;
-//        this.country = country;
-//    }
-
 
     public String getName() {
         return name;
