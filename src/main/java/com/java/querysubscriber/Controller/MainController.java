@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("api/v1/person")
+@RequestMapping("/api/v1/person")
 public class MainController {
     @Autowired
     ServiceImpl service;
