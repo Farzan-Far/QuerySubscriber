@@ -16,9 +16,14 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/person")
-public class MainController {
+public class MainController
+{
+    private final ServiceImpl service;
     @Autowired
-    ServiceImpl service;
+    public MainController(ServiceImpl service)
+    {
+        this.service = service;
+    }
 
     @PostMapping("/add")
     public ResponseEntity<Response> create(@RequestBody Request request) {

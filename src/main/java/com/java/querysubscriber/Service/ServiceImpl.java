@@ -6,7 +6,6 @@ import com.java.querysubscriber.Domain.Person;
 import com.java.querysubscriber.Exception.ResourceNotFoundException;
 import com.java.querysubscriber.Repository.Repo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.server.DelegatingServerHttpResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,10 +14,12 @@ import java.util.Optional;
 @Service
 public class ServiceImpl implements UserService
 {
-
+    private final Repo repository;
     @Autowired
-    Repo repository;
-
+    public ServiceImpl(Repo repository)
+    {
+        this.repository = repository;
+    }
 
     @Override
     public Response createPerson(Request request)
